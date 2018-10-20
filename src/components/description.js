@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import style from './description.module.css';
 import {Link} from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
