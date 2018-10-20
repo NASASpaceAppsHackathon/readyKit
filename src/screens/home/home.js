@@ -5,7 +5,7 @@ import style from './home.module.css'
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className={style.container}>
         <div className={style.title}>ReadyKit</div>
         <div className={style.categories}>
           <div className={style.padding}>
@@ -20,12 +20,12 @@ class Home extends Component {
           </div>
           <div className={style.padding}>
             <Link to="/tornado">
-              <div className={style.tornadoImage}>tornado</div>
+              <div className={style.tornadoImage}>Tornado</div>
             </Link>
           </div>
           <div className={style.padding}>
             <Link to="/tsunami">
-              <div className={style.tsunamiImage}>tsunami</div>
+              <div className={style.tsunamiImage}>Tsunami</div>
             </Link>
           </div>
         </div>
