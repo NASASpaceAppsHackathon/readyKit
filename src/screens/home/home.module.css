@@ -13,31 +13,35 @@
 .earthquakeImage {
   flex: 1;
   height: 200px;
-  width: 300px;
+  width: 250px;
   background-size: contain;
-  background-image: url('./earthquake.jpg');
+  background-repeat: no-repeat;
+  background-image: url('../../assets/earthquake.png');
 }
 
 .volcanoImage {
   flex: 1;
   height: 200px;
-  width: 300px;
+  width: 250px;
   background-size: contain;
-  background-image: url('./volcano.png');
+  background-repeat: no-repeat;
+  background-image: url('../../assets/volcano.png');
 }
 
 .tornadoImage {
   flex: 1;
   height: 200px;
-  width: 300px;
+  width: 250px;
   background-size: contain;
-  background-image: url('./tornado.png');
+  background-repeat: no-repeat;
+  background-image: url('../../assets/tornado.png');
 }
 
 .tsunamiImage {
   flex: 1;
   height: 200px;
-  width: 300px;
+  width: 250px;
   background-size: contain;
-  background-image: url('./tsunami.png');
+  background-repeat: no-repeat;
+  background-image: url('../../assets/tsunami.png');
 }
