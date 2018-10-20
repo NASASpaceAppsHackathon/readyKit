@@ -7,8 +7,9 @@ const SideBar = () => {
 	return (
 		<div id="sideBarBackground">
 			<img src={Pic} style={{height: '60px', width: '60px', marginLeft: '50px' }} alt="" />
-			<h2 style={{textAlign:'center', 'marginTop': '5px'}}>Name</h2>
-			<SideBarButton/>
+			<h2 style={{textAlign:'center', 'marginTop': '5px', 'color': 'white'}}>Name</h2>
+			<SideBarButton title='Checklist'/>
+			<SideBarButton title='Contacts'/>
 		</div>
 	);
 }
