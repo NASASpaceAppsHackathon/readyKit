@@ -1,0 +1,15 @@
+{
+    "earthquake" : [
+        "earthquake list item 1",
+        "hello"
+    ],
+    "tornado" : [
+        "hi"
+    ],
+    "tsunami" : [
+        "hi"
+    ],
+    "volcanicEruption" : [
+        "hi"
+    ]
+}
