@@ -16,24 +16,6 @@ class App extends Component {
 
         <Router>
           <div>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/earthquake">Earthquake</Link>
-              </li>
-              <li>
-                <Link to="/volcanicEruption">Volcanic Eruption</Link>
-              </li>
-              <li>
-                <Link to="/tornado">Tornado</Link>
-              </li>
-              <li>
-                <Link to="/tsunami">Tsunami</Link>
-              </li>
-            </ul>
-            <hr />
             <Route exact path="/" component={Home} />
             <Route exact path="/earthquake" component={Earthquake} />
             <Route

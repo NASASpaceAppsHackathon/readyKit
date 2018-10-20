@@ -1,7 +1,17 @@
 .title {
   color: red;
 }
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.padding {
+  padding: 50px;
+}
 .earthquakeImage {
+  flex: 1;
   height: 200px;
   width: 300px;
   background-size: contain;
@@ -9,19 +19,25 @@
 }
 
 .volcanoImage {
-  height: 30vh;
-  width: 30vw;
+  flex: 1;
+  height: 200px;
+  width: 300px;
+  background-size: contain;
   background-image: url('./volcano.png');
 }
 
 .tornadoImage {
-  height: 30vh;
-  width: 30vw;
+  flex: 1;
+  height: 200px;
+  width: 300px;
+  background-size: contain;
   background-image: url('./tornado.png');
 }
 
 .tsunamiImage {
-  height: 30vh;
-  width: 30vw;
+  flex: 1;
+  height: 200px;
+  width: 300px;
+  background-size: contain;
   background-image: url('./tsunami.png');
 }

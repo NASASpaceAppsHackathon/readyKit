@@ -8,18 +8,26 @@ class Home extends Component {
       <div>
         <div className={style.title}>ReadyKit</div>
         <div className={style.categories}>
-          <Link to="/earthquake">
-            <div className={style.earthquakeImage}>Earthquake</div>
-          </Link>
-          <Link to="/volcanicEruption">
-            <div className={style.volcanoImage}>Volcanic Eruption</div>
-          </Link>
-          <Link to="/tornado">
-            <div className={style.tornadoImage}>tornado</div>
-          </Link>
-          <Link to="/tsunami">
-            <div className={style.tsunamiImage}>tsunami</div>
-          </Link>
+          <div className={style.padding}>
+            <Link to="/earthquake">
+              <div className={style.earthquakeImage}>Earthquake</div>
+            </Link>
+          </div>
+          <div className={style.padding}>
+            <Link to="/volcanicEruption">
+              <div className={style.volcanoImage}>Volcanic Eruption</div>
+            </Link>
+          </div>
+          <div className={style.padding}>
+            <Link to="/tornado">
+              <div className={style.tornadoImage}>tornado</div>
+            </Link>
+          </div>
+          <div className={style.padding}>
+            <Link to="/tsunami">
+              <div className={style.tsunamiImage}>tsunami</div>
+            </Link>
+          </div>
         </div>
       </div>
     )
