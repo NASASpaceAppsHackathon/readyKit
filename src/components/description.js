@@ -10,7 +10,7 @@ library.add(faArrowLeft);
 export const Description= (props) => (
             
             <div className={style.container}>
-            <Link to={props.link} className="button" style={{float: 'left'}}> <FontAwesomeIcon icon="arrow-left" size= '2x' /></Link>
+            <Link to={props.link} className="button" style={{float: 'left'}}> <FontAwesomeIcon icon="arrow-left" size= '2x' color='#00134d'/></Link>
                 <h1 style={{textAlign: 'center'}}>{props.title}</h1>
                 <div className={style.descript} >
                     <p>{props.description}</p>
