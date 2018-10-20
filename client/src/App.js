@@ -10,6 +10,7 @@ import Tsunami from './screens/tsunami/tsunami'
 import Profile from './screens/profile/profile'
 import logo from './assets/logo.png'
 import kit from './assets/kit.png'
+import Test from './components/test'
 
 class App extends Component {
   render() {
@@ -32,6 +33,8 @@ class App extends Component {
             <Route exact path="/tornado" component={Tornado} />
             <Route exact path="/tsunami" component={Tsunami} />
             <Route exact path="/profile" component={Profile} />
+            <Route exact path="/test" component={Test} />
+
           </div>
         </Router>
       </div>
