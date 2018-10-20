@@ -1,40 +1,58 @@
 import React, { Component } from 'react'
 import Pic from '../../assets/profile.png'
-
+import style from './profile.module.css'
+import ProfileBackground from '../../assets/profileBackground.webp'
 
 class Profile extends Component {
-    constructor(props){
-        super(props)
-        this.state={
-            name: 'Jane Doe',
-            email: 'jane.doe@gmail.com',
-            password: '*******',
-            country: 'Canada',
-            city: 'Waterloo',
-            address: '121 Street West',
-            postalCode: 'M1C 2N2',
-            checkLists: { earthquake: '1', volcano: '0', tsunami: '1', tornado: '1'},
-        }
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: 'Jane Doe',
+      email: 'jane.doe@gmail.com',
+      password: '*******',
+      country: 'Canada',
+      city: 'Waterloo',
+      address: '121 Street West',
+      postalCode: 'M1C 2N2',
+      checkLists: ['Earthquake', 'Volcano', 'Tsunami', 'Tornado']
     }
+  }
 
-    render(){
-        const Header =() =>(
-            <div>
-            <div style={{display:'inline-block', verticalAlign:'top'}}>
-                <img src={Pic} alt="" style={{ width: '50%',paddingLeft: '5%', padding: '3%'}}/>
-            </div>
-            <div style={{display:'inline-block'}}>
-                <h1>{this.state.name}</h1> 
-                <h1>{this.state.email}</h1> 
-            </div>
-            </div>
-        )
-        return (
-            <div>
-                <Header />
-            </div>
-        )
-    }
+  render() {
+    const Header = () => (
+      <div>
+        <div>
+          <img
+            className={style.profileBackground}
+            src={ProfileBackground}
+            alt=""
+          />
+          <img className={style.profileImage} src={Pic} alt="" />
+        </div>
+        <div>{this.state.name}</div>
+        <div>{this.state.email}</div>
+      </div>
+    )
+    return (
+      <div className={style.wrap}>
+        <div className={style.center}>
+          <Header />
+          <div>{this.state.password}</div>
+          <div>
+            {this.state.address},{this.state.city}, {this.state.country}
+          </div>
 
+          <div>{this.state.postalcode}</div>
+          <div className={style.list}>
+            Checklists
+            <div className={style.checkLists}>{this.state.checkLists[0]}</div>
+            <div className={style.checkLists}>{this.state.checkLists[1]}</div>
+            <div className={style.checkLists}>{this.state.checkLists[2]}</div>
+            <div className={style.checkLists}>{this.state.checkLists[3]}</div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
-export default Profile;
+export default Profile

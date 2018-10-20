@@ -5,7 +5,7 @@ import style from './home.module.css'
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className={style.wrap}>
         <div className={style.categories}>
           <div className={style.padding}>
             <Link to="/earthquake" className={style.categoryTitle}>
