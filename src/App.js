@@ -7,7 +7,7 @@ import Earthquake from './screens/earthquake/earthquake'
 import VolcanicEruption from './screens/volcanicEruption/volcanicEruption'
 import Tornado from './screens/tornado/tornado'
 import Tsunami from './screens/tsunami/tsunami'
-
+import Profile from './screens/profile/profile'
 class App extends Component {
   render() {
     return (
@@ -25,6 +25,7 @@ class App extends Component {
             />
             <Route exact path="/tornado" component={Tornado} />
             <Route exact path="/tsunami" component={Tsunami} />
+            <Route exact path="/profile" component={Profile} />
           </div>
         </Router>
       </div>
