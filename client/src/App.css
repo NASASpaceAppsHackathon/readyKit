@@ -1,4 +1,21 @@
 #main {
-	margin-left: 160px;
-	padding: 0px 10px;
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+#logo {
+  display: flex;
+  flex-direction: row;
+}
+
+#title {
+  padding-top: 30px;
+  padding-left: 20px;
+  height: 70px;
+}
+
+#logoImage {
+  padding-top: 25px;
+  padding-left: 10px;
+  height: 80px;
 }

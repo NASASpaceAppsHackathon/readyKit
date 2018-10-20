@@ -1,9 +1,3 @@
-.title {
-  color: red;
-  font-size: 100px;
-  height: 100px;
-  padding-top: 50px;
-}
 .categories {
   display: flex;
   flex-wrap: wrap;
@@ -11,8 +5,9 @@
 }
 
 .padding {
-  padding: 50px;
+  padding: 30px;
 }
+
 .earthquakeImage {
   flex: 1;
   height: 200px;
@@ -20,6 +15,10 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('../../assets/earthquake.png');
+  border-width: 10px;
+  border-color: slategray;
+  border-style: solid;
+  border-radius: 30px;
 }
 
 .volcanoImage {
@@ -29,6 +28,10 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('../../assets/volcano.png');
+  border-width: 10px;
+  border-color: slategray;
+  border-style: solid;
+  border-radius: 30px;
 }
 
 .tornadoImage {
@@ -38,6 +41,10 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('../../assets/tornado.png');
+  border-width: 10px;
+  border-color: slategray;
+  border-style: solid;
+  border-radius: 30px;
 }
 
 .tsunamiImage {
@@ -47,4 +54,18 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('../../assets/tsunami.png');
+  border-width: 10px;
+  border-color: slategray;
+  border-style: solid;
+  border-radius: 30px;
+}
+
+.categoryTitle {
+  font-size: 30px;
+  color: black;
+  font-weight: 900;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  padding: 10px;
 }

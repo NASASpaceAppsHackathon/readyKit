@@ -8,12 +8,18 @@ import VolcanicEruption from './screens/volcanicEruption/volcanicEruption'
 import Tornado from './screens/tornado/tornado'
 import Tsunami from './screens/tsunami/tsunami'
 import Profile from './screens/profile/profile'
+import logo from './assets/logo.png'
+import kit from './assets/kit.png'
+
 class App extends Component {
   render() {
     return (
       <div id="main">
         <SideBar />
-
+        <div id="logo">
+          <img id="title" alt={logo} src={logo} />
+          <img id="logoImage" alt={kit} src={kit} />
+        </div>
         <Router>
           <div>
             <Route exact path="/" component={Home} />
