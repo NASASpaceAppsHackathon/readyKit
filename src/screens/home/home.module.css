@@ -1,5 +1,8 @@
 .title {
   color: red;
+  font-size: 100px;
+  height: 100px;
+  padding-top: 50px;
 }
 .categories {
   display: flex;
