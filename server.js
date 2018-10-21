@@ -38,7 +38,7 @@ app.post('/api/:list_id', (req, res) => {
   });
   
   // write updated json to file
-  fs.writeFile('./database/checklist.json', JSON.stringify(jsonData, null), 
+  fs.writeFile('./database/checklist.json', JSON.stringify(jsonData, null,2), 
     function(err) {
       if (err) throw err;
       console.log('complete');

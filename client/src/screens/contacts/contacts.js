@@ -54,7 +54,9 @@ class Contacts extends Component {
             </tr>
           ))}
         </table>
-        <Link to="/new">Add a new Contact</Link>
+		<div style={{paddingLeft: '20%', paddingTop: '3%'}}>
+        <button style={{fontSize: '20px'}}><Link style={{alignItems: 'center', textDecoration: 'none'}}to="/new">Add a new Contact</Link></button>
+		</div>
       </div>
     )
   }

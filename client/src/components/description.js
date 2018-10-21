@@ -30,5 +30,8 @@ export const Description = props => (
       <p>{props.description3}</p>
     </div>
     <img alt="" src={props.img3} className={style.img} />
+    <div className={style.descript}>
+      <p>{props.description4}</p>
+    </div>
   </div>
 )

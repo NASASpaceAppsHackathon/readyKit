@@ -55,10 +55,10 @@ class Profile extends Component {
           </div>
           <div className={style.list}>
             Contacts ({this.state.contacts.length})
-            <div className={style.checkLists}>{this.state.contacts[0]}</div>
-            <div className={style.checkLists}>{this.state.contacts[1]}</div>
-            <div className={style.checkLists}>{this.state.contacts[2]}</div>
-            <div className={style.checkLists}>{this.state.contacts[3]}</div>
+            <Link to="/contacts" className={style.checkLists}>{this.state.contacts[0]}</Link>
+            <Link to="/contacts"className={style.checkLists}>{this.state.contacts[1]}</Link>
+            <Link to="/contacts" className={style.checkLists}>{this.state.contacts[2]}</Link>
+            <Link to="/contacts" className={style.checkLists}>{this.state.contacts[3]}</Link>
           </div>
         </div>
       </div>

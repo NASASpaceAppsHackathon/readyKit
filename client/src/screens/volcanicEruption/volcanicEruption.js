@@ -1,19 +1,69 @@
 import React, { Component } from 'react'
-import { Description } from '../../components/description'
-import Checklist from '../../components/checklist'
+import {Description} from '../../components/description';
+import Checklist from '../../components/checklist';
+import img1 from '../../assets/volcano-1.jpg';
+import img2 from '../../assets/volcano-2.jpg';
+import style from '../../components/description.module.css'
+import { Link } from 'react-router-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
+library.add(faArrowLeft);
+
+const description="A volcano is an opening on the surface of a planet or moon that allows material warmer than its surroundings to escape from its interior. When this material escapes, it causes an eruption. An eruption can be explosive, sending material high into the sky. Or it can be calmer, with gentle flows of material."
+const description2="These volcanic areas usually form mountains built from the many layers of rock, ash or other material that collect around them. Volcanoes can be active, dormant, or extinct. Active volcanoes are volcanoes that have had recent eruptions or are expected to have eruptions in the near future. Dormant volcanoes no longer produce eruptions, but might again sometime in the future. Extinct volcanoes will likely never erupt again." 
+const description3= "Be prepared either to shelter or to evacuate. Develop an evacuation plan and a sheltering plan for yourself, your family, and others in your household. Review the plans and make sure that everyone understands them. "
 class VolcanicEruption extends Component {
   render() {
     return (
-      <div style={{ display: 'flex' }}>
-        <Description
-          title="VOLCANIC ERUPTION"
-          link={'/'}
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. "
-          description2="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)"
-        />
-        <Checklist title="My Checklist" list_id="volcanicEruption" />
+      <div>
+       <div className={style.container}>
+        <Link
+          to="/"
+          className="button"
+          style={{ position: 'absolute', top: '160px' }}
+        >
+        <FontAwesomeIcon icon="arrow-left" size="2x" color="#00134d" />
+        </Link>
+        <h1 className={style.title}>VOLCANOS</h1>
+        <div className={style.descript}>
+          <p>{description}</p>
+        </div>
+        <img alt="" src={img1} className={style.img} />
+        <div className={style.descript}>
+          <p>{description2}</p>
+        </div>
+        <img alt="" src={img2} className={style.img} />
+        <div className={style.descript}>
+          <p></p>
+        </div>
+        <img alt="" className={style.img} />
+        <div className={style.descript}>
+          <h1> HOW TO PREPARE</h1>
+          <p>{description3}</p>
+          <p> Here is what we suggest:</p>
+          <ul>
+            <li>
+            Flashlight and extra batteries
+            </li>
+            <li>
+            First aid kit and manual
+            </li>
+            <li>Emergency Food and Water</li>
+            <li>Manual (nonelectric) can opener</li>
+            <li>Essential medicines</li>
+            <li>Sturdy shoes</li>
+            <li>Breathing protection (masks)</li>
+            <li>Eye protection (goggles)</li>
+            <li>Battery-powered Radio</li>
+          </ul>
+        </div>
       </div>
+      <Checklist title="My Checklist"
+                list_id="volcano"
+                />
+    </div>
     )
   }
 }
