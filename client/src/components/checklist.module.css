@@ -1,24 +1,49 @@
+.checklistComponent {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../assets/clipboard.jpg');
+    height: 400px;
+    right:0;
+    /* width: 100%; */
+
+}
 .listTitle {
-    color: red;
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+    margin: 3% 0;
 }
-.listItem {
-    color: black;
+.listTable {
+    left:0;
+    padding: 2% 10%;
 }
-.checkBox {
-    color:black;
+.checkSquareIcon {
+    color:rgb(162, 224, 147);
 }
 .inputTextBox {
-    color: black;
+    width : 90%;
+    height : 20px;
+    margin: 5px;
+    padding: 2px 5px;
+    border-radius: 7px;
+    border:thin solid rgba(0, 0, 0, 0.336);
 }
 .timesIcon {
     color: black;
 }
-.timesIcon:hover {
+.centerItems {
+    text-align: center;
+}
+.addNewButton, .saveButton {
+    margin: 0 3%;
+    padding: 2px 5px;
+    color: rgb(162, 224, 147);
+    background-color: #000;
+    border-radius: 7px;
+    border:thin solid rgba(0, 0, 0, 0.336);
+}
+.timesIcon:hover, 
+.addNewButton:hover, 
+.saveButton:hover {
     cursor: pointer;
-}
-.addNewButton {
-    color:black;
-}
-.saveButton {
-    color:black;
 }
