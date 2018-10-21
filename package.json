@@ -1,5 +1,5 @@
 {
-  "name": "ready-kits",
+  "name": "ready-kit",
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && yarn start",
