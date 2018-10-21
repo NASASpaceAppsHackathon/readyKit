@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import Checklist from '../../components/checklist'
 
-class EarthquakeChecklist extends Component {
+class TsunamiChecklist extends Component {
   render() {
     return (
       <div>
-        <Checklist title="My Checklist" list_id="earthquake" />
+        <Checklist title="My Checklist" list_id="tsunami" />
       </div>
     )
   }
 }
 
-export default EarthquakeChecklist
+export default TsunamiChecklist
