@@ -44,21 +44,6 @@ class VolcanicEruption extends Component {
     <h1> HOW TO PREPARE</h1>
       <p>{description3}</p>
       <p> Here is what we suggest:</p>
-      <ul>
-        <li>
-        Flashlight and extra batteries
-        </li>
-        <li>
-        First aid kit and manual
-        </li>
-        <li>Emergencu Food and Water</li>
-        <li>Manual (nonelectric) can opener</li>
-        <li>Essential medicines</li>
-        <li>Sturdy shoes</li>
-        <li>Breathing protection (masks)</li>
-        <li>Eye protection (goggles)</li>
-        <li>Battery-powered Radio</li>
-      </ul>
     </div>
   </div>
         <Checklist title="My Checklist"
