@@ -14,7 +14,7 @@ const SideBar = () => {
 				</div>
 			</Link>
 
-			{/* <SideBarButton title='Checklists'/>	 */}
+			 <SideBarButton title='Checklists'/>	 
 			<Link style={{textDecoration:'none'}}to="/contacts">
 				<SideBarButton title='Contacts'/>
 			</Link>
