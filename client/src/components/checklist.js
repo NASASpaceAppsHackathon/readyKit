@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import style from './checklist.module.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import jsonData from '../database/checklist.json'
 import axios from "axios"
 
 /**
@@ -17,9 +16,28 @@ class Checklist extends Component {
         super(props);
         let thisObj = this;
         this.state = {
-            list : jsonData[this.props.list_id]
+            list : []
           };
     }
+
+    componentDidMount() {
+        axios.get('/api/' + this.props.list_id)
+            .then (res => {
+                this.setState({
+                list : res.data
+                })
+              console.log(this.state.list);
+        })
+          .catch(err => console.log(err.message));
+    }
+    
+    // callApi = async (url) => {
+    //     const response = await axios.get(url);
+    //     console.log(response);
+    //     const body = await response.json();
+    //     if (response.status !== 200) throw Error(body.message);
+    //     return body;
+    // };
 
     render() {
         let thisObj = this;
@@ -40,7 +58,7 @@ class Checklist extends Component {
         function showList () { // add all list items 
             console.log('showlist');
             let i = 0;
-            jsonData[thisObj.props.list_id].forEach (item => {
+            thisObj.state.list.forEach( item => {
                 const index = i;
                 list.push(
                     <tr>
@@ -61,19 +79,26 @@ class Checklist extends Component {
 
         // save list into checklist.json file
         function saveList () {
-            console.log('save');
-            jsonData[thisObj.props.list_id] = [];
+            console.log(thisObj.state);
+            axios.post('/api/' + thisObj.props.list_id, thisObj.state.list)
+                .then (res=> {
+                    console.log(res)
+                    console.log(thisObj.state.list)
+                })
+                .catch(err => console.log(err.message));
+            // console.log('save');
+            // jsonData[thisObj.props.list_id] = [];
             
-            let items = document.getElementsByTagName("td");
-            console.log(items);
+            // let items = document.getElementsByTagName("td");
+            // console.log(items);
 
-            for (let i = 1; i < items.length; i += 2) {
-                console.log(items[i]);
-                let input_value = items[i].getElementsByTagName('input')[0].value;
-                jsonData[thisObj.props.list_id].push(input_value);
-            }
-            console.log(jsonData[thisObj.props.list_id]);
-            console.log(jsonData);
+            // for (let i = 1; i < items.length; i += 2) {
+            //     console.log(items[i]);
+            //     let input_value = items[i].getElementsByTagName('input')[0].value;
+            //     jsonData[thisObj.props.list_id].push(input_value);
+            // }
+            // console.log(jsonData[thisObj.props.list_id]);
+            // console.log(jsonData);
         }
 
         showList();
