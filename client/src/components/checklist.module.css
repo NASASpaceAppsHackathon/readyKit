@@ -21,8 +21,9 @@
     color:rgb(162, 224, 147);
 }
 .inputTextBox {
+    resize:none;
+    overflow: hidden;
     width : 90%;
-    height : 20px;
     margin: 5px;
     padding: 2px 5px;
     border-radius: 7px;

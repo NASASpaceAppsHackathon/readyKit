@@ -33,6 +33,16 @@ class Checklist extends Component {
     }
     
     render() {
+        window.addEventListener("load", function() {
+            let textarea = window.document.querySelector("textarea");
+            textarea.style.height = textarea.scrollHeight + "px";
+            textarea.addEventListener("keypress", function() {
+                if(textarea.scrollTop != 0){
+                    textarea.style.height = textarea.scrollHeight + "px";
+                }
+            }, false);
+        }, false);
+
         let thisObj = this;
         let list = [];
 
@@ -45,7 +55,7 @@ class Checklist extends Component {
                     <tr>
                         <td><FontAwesomeIcon icon={faCheckSquare} 
                                              className={style.checkSquareIcon}/></td>
-                        <td><input type="text" 
+                        <td><textarea
                                    value={thisObj.state.list[index]} 
                                    className={style.inputTextBox}
                                    onChange={(e) => changeText(e,index)}/></td>
