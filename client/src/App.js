@@ -12,10 +12,10 @@ import logo from './assets/logo.png'
 import kit from './assets/kit.png'
 import Contacts from './screens/contacts/contacts'
 import Test from './components/test'
-import EarthquakeChecklist from './screens/checklists/earthquakeChecklist'
-import VolcanicEruptionChecklist from './screens/checklists/volcanicEruptionChecklist'
-import TornadoChecklist from './screens/checklists/tornadoChecklist'
-import TsunamiChecklist from './screens/checklists/tsunamiChecklist'
+import EarthquakeChecklist from './screens/checkLists/earthquakeCheckList'
+import VolcanicEruptionChecklist from './screens/checkLists/volcanicEruptionChecklist'
+import TornadoChecklist from './screens/checkLists/tornadoChecklist'
+import TsunamiChecklist from './screens/checkLists/tsunamiChecklist'
 
 class App extends Component {
   render() {
