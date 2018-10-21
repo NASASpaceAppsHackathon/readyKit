@@ -73,7 +73,7 @@ class Checklist extends Component {
         // delete list value
         function deleteItem(event, i) {
             let list_items = thisObj.state.list;
-            list_items.splice(i);
+            list_items.splice(i,1);
 
             thisObj.setState({
                 list : list_items
