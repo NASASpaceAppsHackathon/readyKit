@@ -7,19 +7,26 @@
     "Sturdy shoes",
     "Fire extinguishers"
   ],
-  "tornado": ["First Aid Kit",
+  "tornado": [
+    "First Aid Kit",
     "Secure home structure",
-     "List your emergency contacts (Family, Friends, Utilities Company",
-     "Install sliding bolts or childproof latches on all cabinet doors.",
-     "Place heavy or large items on lower shelves.",
+    "List your emergency contacts (Family, Friends, Utilities Company",
+    "Install sliding bolts or childproof latches on all cabinet doors.",
+    "Place heavy or large items on lower shelves.",
     "Arrange furniture away from windows, mirrors, and picture frames.",
-     "Get Emergency food and water supplies",
-     "Battery powered radio or TV to stay updated with weather conditions",
-     "Practice your emergency plan with family"]
-     ,
-  "tsunami": [
-    "hi"
+    "Get Emergency food and water supplies",
+    "Battery powered radio or TV to stay updated with weather conditions",
+    "Practice your emergency plan with family"
   ],
+  "tsunami": ["Avoid living within several hundred feet of coastline",
+    "Get home checked for resistance against waves",
+     "Discuss tsunami with family",
+     "Plan evacuation routes from your home, school, workplace and other places",
+     "Pick evacuation areas 100 feet above sea level",
+    " Practice evacuation routes",
+     "Get Emergency food and water supplies",
+     "Battery powered radio or TV to stay updated with tsunami conditions",
+     "Store emergency food and water supplies in ready to go bags"],
   "volcano": [
     "Flashlight and extra batteries",
     "First aid kit and manual",
