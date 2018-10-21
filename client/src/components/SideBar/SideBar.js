@@ -13,8 +13,10 @@ const SideBar = () => {
 					<h2 style={{textAlign:'center', 'marginTop': '5px', 'color': 'white'}}>Name</h2>
 				</div>
 			</Link>
-			<SideBarButton title='Checklist' link=""/>	
-			<SideBarButton title='Contacts' link="/contacts"/>
+			<SideBarButton title='Checklists'/>	
+			<Link style={{textDecoration:'none'}}to="/contacts">
+				<SideBarButton title='Contacts'/>
+			</Link>
 		</div>
 	);
 }
