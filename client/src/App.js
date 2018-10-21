@@ -10,8 +10,9 @@ import Tsunami from './screens/tsunami/tsunami'
 import Profile from './screens/profile/profile'
 import logo from './assets/logo.png'
 import kit from './assets/kit.png'
-import Contacts from "./screens/contacts/contacts"
+import Contacts from './screens/contacts/contacts'
 import Test from './components/test'
+import EarthquakeCheckList from './screens/checkLists/earthquakeCheckList'
 
 class App extends Component {
   render() {
@@ -22,12 +23,8 @@ class App extends Component {
           <img id="logoImage" alt={kit} src={kit} />
         </div>
         <Router>
-        <div>
           <div>
-            <SideBar/>
-          </div>
-
-          <div>
+            <SideBar />
             <Route exact path="/" component={Home} />
             <Route exact path="/earthquake" component={Earthquake} />
             <Route
@@ -39,7 +36,11 @@ class App extends Component {
             <Route exact path="/tsunami" component={Tsunami} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/contacts" component={Contacts} />
-          </div>
+            <Route
+              exact
+              path="/earthquakeCheckList"
+              component={EarthquakeCheckList}
+            />
             <Route exact path="/test" component={Test} />
           </div>
         </Router>
