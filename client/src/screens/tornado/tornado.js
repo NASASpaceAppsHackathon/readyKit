@@ -1,17 +1,41 @@
 import React, { Component } from 'react'
 import { Description } from '../../components/description'
 import Checklist from '../../components/checklist'
+import { Link } from 'react-router-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import style from '../../components/description.module.css'
+import img1 from '../../assets/tornado1.jpg'
 
+
+library.add(faArrowLeft);
+
+const description="Tornadoes are funnels of rapidly spinning air. Their winds may top 250 miles (400 kilometers) an hour and can clear a pathway a mile (1.6 kilometers) wide and 50 miles (80 kilometers) long.Twisters are born in thunderstorms and are often accompanied by hail. Giant, persistent thunderstorms called supercells spawn the most destructive tornadoes. These violent storms occur around the world, but the United States is a major hotspot with about a thousand tornadoes every year."
+const description2= "When there are thunderstorms in your area, turn on your radio or TV to get the latest emergency information from local authorities. Listen for announcements of a tornado watch or tornado warning."
 class Tornado extends Component {
   render() {
     return (
-      <div style={{ display: 'flex' }}>
-        <Description
-          title="TORNADO"
-          link={'/'}
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. "
-          description2="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)"
-        />
+      <div className={style.container}>
+    <Link
+      to="/"
+      className="button"
+      style={{ position: 'absolute', top: '160px' }}
+    >
+      <FontAwesomeIcon icon="arrow-left" size="2x" color="#00134d" />
+    </Link>
+    <h1 className={style.title}>TORNADOS</h1>
+
+    <div className={style.descript}>
+      <p>{description}</p>
+    </div>
+    <img alt="" src={img1} className={style.img} />
+    <div className={style.descript}>
+    <h1> HOW TO PREPARE</h1>
+      <p>{description2}</p>
+      <p> Here is what we suggest:</p>
+      
+    </div>
         <Checklist title="My Checklist" list_id="tornado" />
       </div>
     )
