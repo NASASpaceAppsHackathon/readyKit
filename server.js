@@ -18,16 +18,21 @@ app.get('/api/', (req, res) => { // TEST
   res.send({ data: JSON.stringify(JSON.parse(jsonData), null) });
 });
 
-app.get('/api/earthquake', (req, res) => {
-  res.send(JSON.stringify(jsonData['earthquake'], null));
+app.get('/api/:list_id', (req, res) => {
+  if (jsonData[req.params.list_id] == undefined) {
+    res.send([]);
+  } else {
+    res.send(JSON.stringify(jsonData[req.params.list_id], null));
+  }
 });
 
-app.post('/api/earthquake', (req, res) => {
-  jsonData["earthquake"] = [];
+app.post('/api/:list_id', (req, res) => {
+  jsonData[req.params.list_id] = [];
   req.body.forEach (item => {
-    jsonData["earthquake"].push(item);
+    jsonData[req.params.list_id].push(item);
   });
   
+  // write updated json to file
   fs.writeFile('./database/checklist.json', JSON.stringify(jsonData, null), 
     function(err) {
       if (err) throw err;
