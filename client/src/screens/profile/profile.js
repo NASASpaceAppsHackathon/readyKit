@@ -43,7 +43,7 @@ class Profile extends Component {
             <Link to="/earthquakeChecklist" className={style.checkLists}>
               {this.state.checkLists[0]}
             </Link>
-            <Link to="/volcanoChecklist" className={style.checkLists}>
+            <Link to="/volcanicEruptionChecklist" className={style.checkLists}>
               {this.state.checkLists[1]}
             </Link>
             <Link to="/tsunamiChecklist" className={style.checkLists}>

@@ -9,6 +9,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
+library.add(faArrowLeft);
+
 const description="A volcano is an opening on the surface of a planet or moon that allows material warmer than its surroundings to escape from its interior. When this material escapes, it causes an eruption. An eruption can be explosive, sending material high into the sky. Or it can be calmer, with gentle flows of material."
 const description2="These volcanic areas usually form mountains built from the many layers of rock, ash or other material that collect around them. Volcanoes can be active, dormant, or extinct. Active volcanoes are volcanoes that have had recent eruptions or are expected to have eruptions in the near future. Dormant volcanoes no longer produce eruptions, but might again sometime in the future. Extinct volcanoes will likely never erupt again." 
 const description3= "Be prepared either to shelter or to evacuate. Develop an evacuation plan and a sheltering plan for yourself, your family, and others in your household. Review the plans and make sure that everyone understands them. "
