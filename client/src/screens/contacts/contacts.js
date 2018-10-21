@@ -32,7 +32,7 @@ class Contacts extends Component {
   render() 
   {
 		return (
-			<div>
+			<div className="contactsBackground">
 				<table>
   				<tr>
 				<th>Name</th>

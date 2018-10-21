@@ -40,16 +40,16 @@ class Profile extends Component {
           <div>Postal Code: {this.state.postalCode}</div>
           <div className={style.list}>
             Checklists ({this.state.checkLists.length})
-            <Link to="/earthquakeCheckList" className={style.checkLists}>
+            <Link to="/earthquakeChecklist" className={style.checkLists}>
               {this.state.checkLists[0]}
             </Link>
-            <Link to="/volcanoCheckList" className={style.checkLists}>
+            <Link to="/volcanoChecklist" className={style.checkLists}>
               {this.state.checkLists[1]}
             </Link>
-            <Link to="/tsunamiCheckList" className={style.checkLists}>
+            <Link to="/tsunamiChecklist" className={style.checkLists}>
               {this.state.checkLists[2]}
             </Link>
-            <Link to="/tornadoCheckList" className={style.checkLists}>
+            <Link to="/tornadoChecklist" className={style.checkLists}>
               {this.state.checkLists[3]}
             </Link>
           </div>

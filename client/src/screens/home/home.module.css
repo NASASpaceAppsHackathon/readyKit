@@ -1,76 +1,57 @@
 .wrap {
   padding: 30px;
 }
+.no {
+  text-decoration: none;
+  padding: 40px;
+}
 .categories {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   border-radius: 30px;
   background-color: #e9e9e9;
-}
-
-.padding {
+  justify-content: space-around;
   padding: 30px;
-  padding-bottom: 0;
 }
 
 .earthquakeImage {
-  flex: 1;
-  height: 200px;
-  width: 250px;
-  background-size: contain;
-  background-repeat: no-repeat;
   background-image: url('../../assets/earthquake.png');
-  border-width: 10px;
-  border-color: slategray;
-  border-style: solid;
-  border-radius: 30px;
 }
 
 .volcanoImage {
-  flex: 1;
-  height: 200px;
-  width: 250px;
-  background-size: contain;
-  background-repeat: no-repeat;
   background-image: url('../../assets/volcano.png');
-  border-width: 10px;
-  border-color: slategray;
-  border-style: solid;
-  border-radius: 30px;
 }
 
 .tornadoImage {
-  flex: 1;
-  height: 200px;
-  width: 250px;
-  background-size: contain;
-  background-repeat: no-repeat;
   background-image: url('../../assets/tornado.png');
-  border-width: 10px;
-  border-color: slategray;
-  border-style: solid;
-  border-radius: 30px;
 }
 
 .tsunamiImage {
-  flex: 1;
-  height: 200px;
-  width: 250px;
-  background-size: contain;
-  background-repeat: no-repeat;
   background-image: url('../../assets/tsunami.png');
-  border-width: 10px;
-  border-color: slategray;
-  border-style: solid;
-  border-radius: 30px;
+}
+.firesImage {
+  background-image: url('../../assets/fire.png');
+}
+.industrialAccidentsImage {
+  background-image: url('../../assets/indus.png');
+}
+.landslidesImage {
+  background-image: url('../../assets/landslide.png');
+}
+
+.oilSpillsImage {
+  background-image: url('../../assets/oil.png');
+}
+
+.winterWeatherImage {
+  background-image: url('../../assets/winter.png');
 }
 
 .categoryTitle {
-  font-size: 33px;
-  color: black;
+  font-size: 30px;
+  color: #2e3439;
   font-weight: 900;
-  text-decoration: none;
+  opacity: 0.7;
   padding: 10px;
-  opacity: 0.6;
 }

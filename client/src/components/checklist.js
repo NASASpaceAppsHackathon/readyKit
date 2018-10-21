@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import style from './checklist.module.css'
-import { library } from '@fortawesome/fontawesome-svg-core'
+// import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import axios from "axios"
 
 /**
@@ -14,7 +15,6 @@ import axios from "axios"
 class Checklist extends Component {  
     constructor(props) {
         super(props);
-        let thisObj = this;
         this.state = {
             list : []
           };
@@ -32,18 +32,32 @@ class Checklist extends Component {
           .catch(err => console.log(err.message));
     }
     
-    // callApi = async (url) => {
-    //     const response = await axios.get(url);
-    //     console.log(response);
-    //     const body = await response.json();
-    //     if (response.status !== 200) throw Error(body.message);
-    //     return body;
-    // };
-
     render() {
         let thisObj = this;
         let list = [];
 
+        function showList () { // add all list items 
+            console.log('showlist');
+            let i = 0;
+            thisObj.state.list.forEach( item => {
+                const index = i;
+                list.push(
+                    <tr>
+                        <td><input type="checkbox" className={style.checkBox}/></td>
+                        <td><input type="text" 
+                                   value={thisObj.state.list[index]} 
+                                   className={style.inputTextBox}
+                                   onChange={(e) => changeText(e,index)}/></td>
+                        <td><FontAwesomeIcon icon={faTimes} 
+                                             className={style.timesIcon}
+                                             onClick={(e) => deleteItem(e,index)}/></td>
+                    </tr>);
+                i++;
+            });
+        }     
+        
+        
+        // change list values on user input
         function changeText(event, i) {
             let list_items = thisObj.state.list;
             for (let j = 0; j < thisObj.state.list.length; j++) {
@@ -56,26 +70,25 @@ class Checklist extends Component {
             });
         }
 
-        function showList () { // add all list items 
-            console.log('showlist');
-            let i = 0;
-            thisObj.state.list.forEach( item => {
-                const index = i;
-                list.push(
-                    <tr>
-                        <td><input type="checkbox"/></td>
-                        <td><input type="text" value={thisObj.state.list[index]} onChange={(e) => changeText(e,index)}/></td>
-                    </tr>);
-                i++;
+        // delete list value
+        function deleteItem(event, i) {
+            let list_items = thisObj.state.list;
+            list_items.splice(i,1);
+
+            thisObj.setState({
+                list : list_items
             });
-        }        
+        }
 
         // add an empty row to list
         function addNew () {
             console.log('add new');
-            let item = document.createElement("tr");
-            item.innerHTML = '<td><input type="checkbox"/></td><td><input type="text"/></td>';
-            document.getElementById("list-items").appendChild(item);
+            // add new empty string to state
+            let list = thisObj.state.list;
+            list.push('');
+            thisObj.setState({
+                list : list
+            });
         }        
 
         // save list into checklist.json file
@@ -87,19 +100,6 @@ class Checklist extends Component {
                     console.log(thisObj.state.list)
                 })
                 .catch(err => console.log(err.message));
-            // console.log('save');
-            // jsonData[thisObj.props.list_id] = [];
-            
-            // let items = document.getElementsByTagName("td");
-            // console.log(items);
-
-            // for (let i = 1; i < items.length; i += 2) {
-            //     console.log(items[i]);
-            //     let input_value = items[i].getElementsByTagName('input')[0].value;
-            //     jsonData[thisObj.props.list_id].push(input_value);
-            // }
-            // console.log(jsonData[thisObj.props.list_id]);
-            // console.log(jsonData);
         }
 
         showList();
@@ -110,8 +110,8 @@ class Checklist extends Component {
             <table>
             <tbody id="list-items" className={style.listItem}>{list}</tbody>
             </table>
-            <button onClick={addNew}>Add new</button>
-            <button onClick={saveList}>Save</button>
+            <button onClick={addNew} className={style.addNewButton}>Add new</button>
+            <button onClick={saveList} className={style.saveButton}>Save</button>
         </div>
       )
     }

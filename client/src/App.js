@@ -12,7 +12,10 @@ import logo from './assets/logo.png'
 import kit from './assets/kit.png'
 import Contacts from './screens/contacts/contacts'
 import Test from './components/test'
-import EarthquakeCheckList from './screens/checkLists/earthquakeCheckList'
+import EarthquakeChecklist from './screens/checklists/earthquakeChecklist'
+import VolcanicEruptionChecklist from './screens/checklists/volcanicEruptionChecklist'
+import TornadoChecklist from './screens/checklists/tornadoChecklist'
+import TsunamiChecklist from './screens/checklists/tsunamiChecklist'
 
 class App extends Component {
   render() {
@@ -38,8 +41,23 @@ class App extends Component {
             <Route exact path="/contacts" component={Contacts} />
             <Route
               exact
-              path="/earthquakeCheckList"
-              component={EarthquakeCheckList}
+              path="/earthquakeChecklist"
+              component={EarthquakeChecklist}
+            />
+            <Route
+              exact
+              path="/volcanicEruptionChecklist"
+              component={VolcanicEruptionChecklist}
+            />
+            <Route
+              exact
+              path="/tornadoChecklist"
+              component={TornadoChecklist}
+            />
+            <Route
+              exact
+              path="/tsunamiChecklist"
+              component={TsunamiChecklist}
             />
             <Route exact path="/test" component={Test} />
           </div>
