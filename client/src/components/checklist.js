@@ -37,18 +37,18 @@ class Checklist extends Component {
     window.addEventListener(
       'load',
       function() {
-        let textarea = window.document.querySelector('textarea')
+        let textarea = window.document.getElementsByTagName('textarea')
         if (textarea != null) {
-          textarea.style.height = textarea.scrollHeight + 'px'
-          textarea.addEventListener(
-            'keypress',
-            function() {
-              if (textarea.scrollTop != 0) {
-                textarea.style.height = textarea.scrollHeight + 'px'
-              }
-            },
-            false
-          )
+            Array.from(textarea).forEach (t => {
+                t.style.height = t.scrollHeight + 'px'
+                t.addEventListener('keypress', function() {
+                    if (t.scrollTop != 0) {
+                        t.style.height = t.scrollHeight + 'px'
+                    }
+                },
+                  false
+                )
+            });          
         }
       },
       false
