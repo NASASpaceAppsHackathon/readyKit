@@ -2,11 +2,13 @@
 
 const express = require('express');
 
+
 const app = express();
 const port = process.env.PORT || 5000;
 
 let fs = require("fs");
 let jsonData = JSON.parse(fs.readFileSync("./database/checklist.json"));
+let contacts= JSON.parse(fs.readFileSync("./database/contacts.json"));
 
 app.get('/api/', (req, res) => { // TEST
   console.log(jsonData);
@@ -29,4 +31,7 @@ app.post('/api/earthquake', (req, res) => {
   //res.send(JSON.stringify(JSON.parse(jsonData)['earthquake'], null));
 });
 
+app.get('/api/contacts', (req, res) => { // TEST
+    res.send({ contacts });
+  });
 app.listen(port, () => console.log(`Listening on port ${port}`));
