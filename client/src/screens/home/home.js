@@ -40,7 +40,7 @@ class Home extends Component {
           </Link>
           <Link to="/fires" className={style.no}>
             <div className={style.firesImage} style={styles}>
-              <div className={style.categoryTitle}>TSUNAMIS</div>
+              <div className={style.categoryTitle}>FIRES</div>
             </div>
           </Link>
           <Link to="/industrialAccidents" className={style.no}>
