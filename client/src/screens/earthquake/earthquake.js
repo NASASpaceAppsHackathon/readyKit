@@ -1,21 +1,69 @@
 import React, { Component } from 'react'
 import { Description } from '../../components/description'
 import Checklist from '../../components/checklist'
+import img1 from '../../assets/earthquake-1.jpg';
+import img2 from '../../assets/earthquake-2.jpg';
+import style from '../../components/description.module.css'
+import { Link } from 'react-router-dom'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faArrowLeft);
+
+const description="An earthquake is an intense shaking of Earth’s surface. The shaking is caused by movements in Earth’s outermost layer.";
+const description2="Although the Earth looks like a pretty solid place from the surface, it’s actually extremely active just below the surface. The Earth is made of four basic layers: a solid crust, a hot, nearly solid mantle, a liquid outer core and a solid inner core.The solid crust and top, stiff layer of the mantle make up a region called the lithosphere. The lithosphere isn’t a continuous piece that wraps around the whole Earth like an eggshell. It’s actually made up of giant puzzle pieces called tectonic plates. Tectonic plates are constantly shifting as they drift around on the viscous, or slowly flowing, mantle layer below."
+const description3= "This non-stop movement causes stress on Earth’s crust. When the stresses get too large, it leads to cracks called faults. When tectonic plates move, it also causes movements at the faults. An earthquake is the sudden movement of Earth’s crust at a fault line."
+const description4 = "If an earthquake happens, protect yourself right away. Drop, Cover, then Hold On!";
 
 class Earthquake extends Component {
   render() {
     return (
-      <div style={{ display: 'flex' }}>
-        <Description
-          title="EARTHQUAKE"
-          link={'/'}
-          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. "
-          description2="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)"
-        />
-        <Checklist title="My Checklist" list_id="earthquake" />
+        <div>
+         <div className={style.container}>
+          <Link
+            to="/"
+            className="button"
+            style={{ position: 'absolute', top: '160px' }}
+          >
+          <FontAwesomeIcon icon="arrow-left" size="2x" color="#00134d" />
+          </Link>
+          <h1 className={style.title}>EARTHQUAKES</h1>
+          <div className={style.descript}>
+            <p>{description}</p>
+          </div>
+          <img alt="" src={img1} className={style.img} />
+          <div className={style.descript}>
+            <p>{description2}</p>
+          </div>
+          <img alt="" src={img2} className={style.img} />
+          <div className={style.descript}>
+            <p></p>
+          </div>
+          <img alt="" className={style.img} />
+          <div className={style.descript}>
+            <p>{description3}</p>
+          </div>
+          <div className={style.descript}>
+            <h1> HOW TO PREPARE</h1>
+            <p>{description4}</p>
+            <p> Here is what we suggest:</p>
+            <ul>
+              <li>Non-perishable food such as dehydrated food, powdered milk, canned juices, dried cereals, fruits and non-salted nuts</li>
+              <li>Flashlights and spare batteries</li>
+              <li>Portable, battery-powered radio or television and spare batteries</li>
+              <li>First aid kit and manual</li>
+              <li>Sturdy shoes</li>
+              <li>Fire extinguishers</li>
+            </ul>
+          </div>
+        </div>
+        <Checklist title="My Checklist"
+                  list_id="earthquake"
+                  />
       </div>
-    )
+      )
+    }
   }
-}
 
 export default Earthquake

@@ -19,53 +19,52 @@ class VolcanicEruption extends Component {
     return (
       <div>
        <div className={style.container}>
-    <Link
-      to="/"
-      className="button"
-      style={{ position: 'absolute', top: '160px' }}
-    >
-      <FontAwesomeIcon icon="arrow-left" size="2x" color="#00134d" />
-    </Link>
-    <h1 className={style.title}>VOLCANOS</h1>
-
-    <div className={style.descript}>
-      <p>{description}</p>
-    </div>
-    <img alt="" src={img1} className={style.img} />
-    <div className={style.descript}>
-      <p>{description2}</p>
-    </div>
-    <img alt="" src={img2} className={style.img} />
-    <div className={style.descript}>
-      <p></p>
-    </div>
-    <img alt="" className={style.img} />
-    <div className={style.descript}>
-    <h1> HOW TO PREPARE</h1>
-      <p>{description3}</p>
-      <p> Here is what we suggest:</p>
-      <ul>
-        <li>
-        Flashlight and extra batteries
-        </li>
-        <li>
-        First aid kit and manual
-        </li>
-        <li>Emergencu Food and Water</li>
-        <li>Manual (nonelectric) can opener</li>
-        <li>Essential medicines</li>
-        <li>Sturdy shoes</li>
-        <li>Breathing protection (masks)</li>
-        <li>Eye protection (goggles)</li>
-        <li>Battery-powered Radio</li>
-      </ul>
-    </div>
-  </div>
-        <Checklist title="My Checklist"
-                  list_id="volcanicEruption"
-                  />
+        <Link
+          to="/"
+          className="button"
+          style={{ position: 'absolute', top: '160px' }}
+        >
+        <FontAwesomeIcon icon="arrow-left" size="2x" color="#00134d" />
+        </Link>
+        <h1 className={style.title}>VOLCANOS</h1>
+        <div className={style.descript}>
+          <p>{description}</p>
         </div>
-      )
+        <img alt="" src={img1} className={style.img} />
+        <div className={style.descript}>
+          <p>{description2}</p>
+        </div>
+        <img alt="" src={img2} className={style.img} />
+        <div className={style.descript}>
+          <p></p>
+        </div>
+        <img alt="" className={style.img} />
+        <div className={style.descript}>
+          <h1> HOW TO PREPARE</h1>
+          <p>{description3}</p>
+          <p> Here is what we suggest:</p>
+          <ul>
+            <li>
+            Flashlight and extra batteries
+            </li>
+            <li>
+            First aid kit and manual
+            </li>
+            <li>Emergency Food and Water</li>
+            <li>Manual (nonelectric) can opener</li>
+            <li>Essential medicines</li>
+            <li>Sturdy shoes</li>
+            <li>Breathing protection (masks)</li>
+            <li>Eye protection (goggles)</li>
+            <li>Battery-powered Radio</li>
+          </ul>
+        </div>
+      </div>
+      <Checklist title="My Checklist"
+                list_id="volcano"
+                />
+    </div>
+    )
   }
 }
 
