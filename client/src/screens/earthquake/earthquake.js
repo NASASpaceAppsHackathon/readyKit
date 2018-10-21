@@ -31,7 +31,7 @@ class Earthquake extends Component {
             style={{ position: 'absolute', top: '160px' }}
           >
             <FontAwesomeIcon
-              style={{ marginTop: '-55px' }}
+              style={{ marginTop: '10px' }}
               icon="arrow-left"
               size="2x"
               color="#00134d"
