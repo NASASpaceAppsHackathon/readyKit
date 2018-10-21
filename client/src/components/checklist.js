@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import style from './checklist.module.css'
 // import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTimes, faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 import axios from "axios"
 
 /**
@@ -43,7 +43,8 @@ class Checklist extends Component {
                 const index = i;
                 list.push(
                     <tr>
-                        <td><input type="checkbox" className={style.checkBox}/></td>
+                        <td><FontAwesomeIcon icon={faCheckSquare} 
+                                             className={style.checkSquareIcon}/></td>
                         <td><input type="text" 
                                    value={thisObj.state.list[index]} 
                                    className={style.inputTextBox}
@@ -105,13 +106,15 @@ class Checklist extends Component {
         showList();
 
         return (
-        <div>
+        <div className={style.checklistComponent}>
             <div className={style.listTitle}>{this.props.title}</div>
-            <table>
+            <table className={style.listTable}>
             <tbody id="list-items" className={style.listItem}>{list}</tbody>
             </table>
+            <div className={style.centerItems}>
             <button onClick={addNew} className={style.addNewButton}>Add new</button>
             <button onClick={saveList} className={style.saveButton}>Save</button>
+            </div>
         </div>
       )
     }
