@@ -1,50 +1,53 @@
 .checklistComponent {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url('../assets/clipboard.jpg');
-    height: 400px;
-    right:0;
-    /* width: 100%; */
+  padding: 50px;
 
+  height: 400px;
 }
 .listTitle {
-    font-weight: bold;
-    font-size: x-large;
-    text-align: center;
-    margin: 3% 0;
+  font-weight: bold;
+  font-size: x-large;
+  text-align: center;
+  margin: 3% 0;
 }
 .listTable {
-    left:0;
-    padding: 2% 10%;
+  margin-left: 100px;
+  padding: 2% 10%;
+  font-size: 30px;
+  vertical-align: bottom;
+}
+.listItem {
+  font-size: 30px;
+  vertical-align: bottom;
 }
 .checkSquareIcon {
-    color:rgb(162, 224, 147);
+  color: rgb(162, 224, 147);
 }
 .inputTextBox {
-    resize:none;
-    overflow: hidden;
-    width : 90%;
-    margin: 5px;
-    padding: 2px 5px;
-    border-radius: 7px;
-    border:thin solid rgba(0, 0, 0, 0.336);
+  resize: none;
+  overflow: hidden;
+  width: 90%;
+  margin: 5px;
+  padding: 2px 5px;
+  border-radius: 7px;
+  border: thin solid rgba(0, 0, 0, 0.336);
 }
 .timesIcon {
-    color: black;
+  color: black;
 }
 .centerItems {
-    text-align: center;
+  text-align: center;
 }
-.addNewButton, .saveButton {
-    margin: 0 3%;
-    padding: 2px 5px;
-    color: rgb(162, 224, 147);
-    background-color: #000;
-    border-radius: 7px;
-    border:thin solid rgba(0, 0, 0, 0.336);
+.addNewButton,
+.saveButton {
+  margin: 0 3%;
+  padding: 2px 5px;
+  color: rgb(162, 224, 147);
+  background-color: #000;
+  border-radius: 7px;
+  border: thin solid rgba(0, 0, 0, 0.336);
 }
-.timesIcon:hover, 
-.addNewButton:hover, 
+.timesIcon:hover,
+.addNewButton:hover,
 .saveButton:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
