@@ -13,6 +13,7 @@ import kit from './assets/kit.png'
 import Contacts from './screens/contacts/contacts'
 import Test from './components/test'
 import Checklist from './components/checklist'
+import AddContact from './screens/contacts/addcontact'
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
             <Route exact path="/tsunami" component={Tsunami} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/contacts" component={Contacts} />
+            <Route exact path="/new" component={AddContact} />
             <Route exact path="/earthquakeChecklist"
               render={()=><Checklist title="My Checklist" list_id="earthquake"/>}
             />
