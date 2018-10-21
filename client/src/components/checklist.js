@@ -21,12 +21,13 @@ class Checklist extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/' + this.props.list_id)
+        let thisObj = this;
+        axios.get('/api/' + thisObj.props.list_id)
             .then (res => {
-                this.setState({
+                thisObj.setState({
                 list : res.data
                 })
-              console.log(this.state.list);
+              console.log(thisObj.state.list);
         })
           .catch(err => console.log(err.message));
     }
