@@ -5,7 +5,7 @@ class EarthquakeCheckList extends Component {
   render() {
     return (
       <div>
-        <Checklist title="My Checklist" list_id="tornado" />
+        <Checklist title="My Checklist" list_id="earthquake" />
       </div>
     )
   }
