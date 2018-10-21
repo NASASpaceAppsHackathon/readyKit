@@ -39,16 +39,18 @@ class Checklist extends Component {
       function() {
         let textarea = window.document.getElementsByTagName('textarea')
         if (textarea != null) {
-            Array.from(textarea).forEach (t => {
-                t.style.height = t.scrollHeight + 'px'
-                t.addEventListener('keypress', function() {
-                    if (t.scrollTop != 0) {
-                        t.style.height = t.scrollHeight + 'px'
-                    }
-                },
-                  false
-                )
-            });          
+          Array.from(textarea).forEach(t => {
+            t.style.height = t.scrollHeight + 'px'
+            t.addEventListener(
+              'keypress',
+              function() {
+                if (t.scrollTop != 0) {
+                  t.style.height = t.scrollHeight + 'px'
+                }
+              },
+              false
+            )
+          })
         }
       },
       false
@@ -149,10 +151,10 @@ class Checklist extends Component {
         </table>
         <div className={style.centerItems}>
           <button onClick={addNew} className={style.addNewButton}>
-            Add new
+            ADD NEW ITEM
           </button>
           <button onClick={saveList} className={style.saveButton}>
-            Save
+            SAVE LIST
           </button>
         </div>
       </div>

@@ -1,50 +1,71 @@
 .checklistComponent {
   padding: 50px;
-
-  height: 400px;
+  width: 600px;
 }
 .listTitle {
   font-weight: bold;
   font-size: x-large;
   text-align: center;
-  margin: 3% 0;
+  margin: 3% 0 3% 20%;
 }
 .listTable {
   margin-left: 100px;
   padding: 2% 10%;
   font-size: 30px;
-  vertical-align: bottom;
+  background: transparent;
+  width: 500px;
 }
+
 .listItem {
-  font-size: 30px;
-  vertical-align: bottom;
+  padding: 15px;
+  width: 500px;
+  background: transparent;
 }
+
+tbody tr:nth-child(even) td,
+tbody tr.even td {
+  background: #ffffff;
+}
+
+td {
+  border-style: hidden !important;
+}
+
 .checkSquareIcon {
   color: rgb(162, 224, 147);
+
+  margin: 0 -10px 0 20px;
 }
 .inputTextBox {
   resize: none;
   overflow: hidden;
   width: 90%;
-  margin: 5px;
-  padding: 2px 5px;
+  margin: 5px 0 0 15px;
+  padding: 20px 0 0 0;
   border-radius: 7px;
   border: thin solid rgba(0, 0, 0, 0.336);
+  font-size: 20px;
+  text-align: center;
 }
+
 .timesIcon {
   color: black;
+
+  margin: 0 -7px 0 20px;
 }
 .centerItems {
   text-align: center;
+  padding: 20px 0 0 17%;
 }
 .addNewButton,
 .saveButton {
   margin: 0 3%;
-  padding: 2px 5px;
+  padding: 5px;
   color: rgb(162, 224, 147);
-  background-color: #000;
+  background-color: #2e3439;
   border-radius: 7px;
-  border: thin solid rgba(0, 0, 0, 0.336);
+  font-size: 20px;
+  font-weight: 500;
 }
 .timesIcon:hover,
 .addNewButton:hover,
