@@ -24,7 +24,7 @@ class Contacts extends Component {
         this.setState({
          newContact: res.data.contacts })
 
-      console.log(this.state.newContact);
+      console.log(res.data.contacts);
 })
   .catch(err => console.log(err.message));
 };

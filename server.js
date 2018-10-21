@@ -19,6 +19,9 @@ app.get('/api/', (req, res) => { // TEST
   console.log(JSON.stringify(jsonData["earthquake"]));
   res.send({ data: JSON.stringify(JSON.parse(jsonData), null) });
 });
+app.get('/api/contacts', (req, res) => { // TEST
+    res.send({ contacts });
+  });
 
 app.get('/api/:list_id', (req, res) => {
   if (jsonData[req.params.list_id] == undefined) {
@@ -44,7 +47,5 @@ app.post('/api/:list_id', (req, res) => {
   res.send(req.body);
 });
 
-app.get('/api/contacts', (req, res) => { // TEST
-    res.send({ contacts });
-  });
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
