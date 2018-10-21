@@ -156,6 +156,7 @@ class Checklist extends Component {
           <button onClick={saveList} className={style.saveButton}>
             SAVE LIST
           </button>
+          <button className={style.saveButton}>DOWNLOAD</button>
         </div>
       </div>
     )
