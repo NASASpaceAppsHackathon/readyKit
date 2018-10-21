@@ -12,10 +12,7 @@ import logo from './assets/logo.png'
 import kit from './assets/kit.png'
 import Contacts from './screens/contacts/contacts'
 import Test from './components/test'
-import EarthquakeChecklist from './screens/checklists/earthquakeChecklist'
-import VolcanicEruptionChecklist from './screens/checklists/volcanicEruptionChecklist'
-import TornadoChecklist from './screens/checklists/tornadoChecklist'
-import TsunamiChecklist from './screens/checklists/tsunamiChecklist'
+import Checklist from './components/checklist'
 
 class App extends Component {
   render() {
@@ -39,25 +36,17 @@ class App extends Component {
             <Route exact path="/tsunami" component={Tsunami} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/contacts" component={Contacts} />
-            <Route
-              exact
-              path="/earthquakeChecklist"
-              component={EarthquakeChecklist}
+            <Route exact path="/earthquakeChecklist"
+              render={()=><Checklist title="My Checklist" list_id="earthquake"/>}
             />
-            <Route
-              exact
-              path="/volcanicEruptionChecklist"
-              component={VolcanicEruptionChecklist}
+            <Route exact path="/volcanoChecklist"
+              render={()=><Checklist title="My Checklist" list_id="volcano"/>}
             />
-            <Route
-              exact
-              path="/tornadoChecklist"
-              component={TornadoChecklist}
+            <Route exact path="/tornadoChecklist"
+              render={()=><Checklist title="My Checklist" list_id="tornado"/>}
             />
-            <Route
-              exact
-              path="/tsunamiChecklist"
-              component={TsunamiChecklist}
+            <Route exact path="/tsunamiChecklist"
+              render={()=><Checklist title="My Checklist" list_id="tsunami"/>}
             />
             <Route exact path="/test" component={Test} />
           </div>

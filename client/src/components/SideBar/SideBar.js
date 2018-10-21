@@ -10,11 +10,11 @@ const SideBar = () => {
 			<Link style={{textDecoration:'none'}}to="/profile">
 				<div>
 					<img src={ProfilePic} style={{height: '60px', width: '60px', marginLeft: '50px' }} alt="" />
-					<h2 style={{textAlign:'center', 'marginTop': '5px', 'color': 'white'}}>Name</h2>
+					<h2 style={{textAlign:'center', 'marginTop': '5px', 'color': 'white'}}>Jane Doe</h2>
 				</div>
 			</Link>
 
-			<SideBarButton title='Checklists'/>	
+			{/* <SideBarButton title='Checklists'/>	 */}
 			<Link style={{textDecoration:'none'}}to="/contacts">
 				<SideBarButton title='Contacts'/>
 			</Link>
