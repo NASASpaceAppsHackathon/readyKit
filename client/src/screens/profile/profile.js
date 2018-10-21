@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Pic from '../../assets/profile.png'
 import style from './profile.module.css'
 import ProfileBackground from '../../assets/profileBackground.webp'
@@ -14,41 +15,50 @@ class Profile extends Component {
       city: 'Waterloo',
       address: '121 Street West',
       postalCode: 'M1C 2N2',
-      checkLists: ['Earthquake', 'Volcano', 'Tsunami', 'Tornado']
+      checkLists: ['Earthquake', 'Volcano', 'Tsunami', 'Tornado'],
+      contacts: ['Mom', 'Dad', 'Sarah', 'John']
     }
   }
 
   render() {
-    const Header = () => (
-      <div>
-        <div>
+    return (
+      <div className={style.wrap}>
+        <div className={style.center}>
           <img
             className={style.profileBackground}
             src={ProfileBackground}
             alt=""
           />
           <img className={style.profileImage} src={Pic} alt="" />
-        </div>
-        <div>{this.state.name}</div>
-        <div>{this.state.email}</div>
-      </div>
-    )
-    return (
-      <div className={style.wrap}>
-        <div className={style.center}>
-          <Header />
-          <div>{this.state.password}</div>
+          <div>Name: {this.state.name}</div>
+          <div>Email: {this.state.email}</div>
+          <div>Password: {this.state.password}</div>
           <div>
-            {this.state.address},{this.state.city}, {this.state.country}
+            Address: {this.state.address},{this.state.city},{' '}
+            {this.state.country}
           </div>
-
-          <div>{this.state.postalcode}</div>
+          <div>Postal Code: {this.state.postalCode}</div>
           <div className={style.list}>
-            Checklists
-            <div className={style.checkLists}>{this.state.checkLists[0]}</div>
-            <div className={style.checkLists}>{this.state.checkLists[1]}</div>
-            <div className={style.checkLists}>{this.state.checkLists[2]}</div>
-            <div className={style.checkLists}>{this.state.checkLists[3]}</div>
+            Checklists ({this.state.checkLists.length})
+            <Link to="/earthquakeCheckList" className={style.checkLists}>
+              {this.state.checkLists[0]}
+            </Link>
+            <Link to="/volcanoCheckList" className={style.checkLists}>
+              {this.state.checkLists[1]}
+            </Link>
+            <Link to="/tsunamiCheckList" className={style.checkLists}>
+              {this.state.checkLists[2]}
+            </Link>
+            <Link to="/tornadoCheckList" className={style.checkLists}>
+              {this.state.checkLists[3]}
+            </Link>
+          </div>
+          <div className={style.list}>
+            Contacts ({this.state.contacts.length})
+            <div className={style.checkLists}>{this.state.contacts[0]}</div>
+            <div className={style.checkLists}>{this.state.contacts[1]}</div>
+            <div className={style.checkLists}>{this.state.contacts[2]}</div>
+            <div className={style.checkLists}>{this.state.contacts[3]}</div>
           </div>
         </div>
       </div>
