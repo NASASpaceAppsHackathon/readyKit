@@ -46,6 +46,7 @@ td {
   border: thin solid rgba(0, 0, 0, 0.336);
   font-size: 20px;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .timesIcon {
