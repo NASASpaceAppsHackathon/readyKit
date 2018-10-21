@@ -14,7 +14,10 @@ const SideBar = () => {
 				</div>
 			</Link>
 
-			{/* <SideBarButton title='Checklists'/>	 */}
+			<Link style={{textDecoration:'none'}}to="/">
+				<SideBarButton title='Checklists'/> 
+			 </Link>
+
 			<Link style={{textDecoration:'none'}}to="/contacts">
 				<SideBarButton title='Contacts'/>
 			</Link>
