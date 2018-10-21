@@ -18,12 +18,12 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        <div id="logo">
-          <img id="title" alt={logo} src={logo} />
-          <img id="logoImage" alt={kit} src={kit} />
-        </div>
         <Router>
           <div>
+            <Link to="./" id="logo">
+              <img id="title" alt={logo} src={logo} />
+              <img id="logoImage" alt={kit} src={kit} />
+            </Link>
             <SideBar />
             <Route exact path="/" component={Home} />
             <Route exact path="/earthquake" component={Earthquake} />
