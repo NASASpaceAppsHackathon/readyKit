@@ -1,10 +1,10 @@
-## ReadyKit!
+# ReadyKit!
 
-# What is ReadyKit?
+## What is ReadyKit?
 
 ReadyKit is geared towards preparing individuals for natural disasters that may strike. With a clean interface, the user is able to easily maneuver through the web app to learn about disaster, customize prep lists and add contacts, all in one location!
 
-# Background
+## Background
 
 With the world constantly changing through global warming and other natural phenomenons, we need a platform to allow individuals to prepare for any kind of natural disaster.
 
@@ -14,7 +14,7 @@ That is where our solution comes in to play. This web app takes the technologica
 
 One of the strongest points of this application is the clean interface it offers. Usually, informational websites and content tend to less visually appealing but this app is quite the opposite. Even while spreading information about something that is very serious, it does not scare or bore the user. Colors make the app pop out and are a visual treat for users of all ages, from children to adults. Thus, this app ensure that the content is delivered to the user. The interactive aspect lets the user not only learn about such emergencies but also get involved in making their own checklists and exploring a serious topic in greater depth.
 
-# Technologies
+## Technologies
 
 * Nodejs
 * Express
