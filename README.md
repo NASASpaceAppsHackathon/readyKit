@@ -16,7 +16,7 @@ One of the strongest points of this application is the clean interface it offers
 
 # Technologies
 
-Nodejs
-Express
-React
-Javascript
+* Nodejs
+* Express
+* React
+* Javascript
