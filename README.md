@@ -4,6 +4,10 @@
 
 ReadyKit is geared towards preparing individuals for natural disasters that may strike. With a clean interface, the user is able to easily maneuver through the web app to learn about disaster, customize prep lists and add contacts, all in one location!
 
+![Home Screen](https://github.com/NASASpaceAppsHackathon/readyKit/blob/master/client/src/assets/screenshots/home.png)
+![Profile Screen](https://github.com/NASASpaceAppsHackathon/readyKit/blob/master/client/src/assets/screenshots/profile.png)
+![Checklist Screen](https://github.com/NASASpaceAppsHackathon/readyKit/blob/master/client/src/assets/screenshots/page.png)
+
 ## Background
 
 With the world constantly changing through global warming and other natural phenomenons, we need a platform to allow individuals to prepare for any kind of natural disaster.
